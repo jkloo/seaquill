@@ -479,6 +479,7 @@
 				31E47B821CE2A8C500F5DEF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31E47B831CE2A8C500F5DEF8 /* Build configuration list for PBXNativeTarget "SeaquillTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +488,7 @@
 				31E47B851CE2A8C500F5DEF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31E47B861CE2A8C500F5DEF8 /* Build configuration list for PBXNativeTarget "SeaquillUITests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +497,7 @@
 				31E47B881CE2A8C500F5DEF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
