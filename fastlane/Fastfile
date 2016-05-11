@@ -1,0 +1,43 @@
+default_platform :mac
+
+platform :mac do
+    before_all do
+        cocoapods
+    end
+
+    desc "Runs all the tests"
+    lane :test do
+        scan(scheme: "Seaquill",
+             configuration: "Debug")
+    end
+
+    desc "Submit a new Beta Build to HockeyApp"
+    lane :beta do
+        ENV['TARGET_BUILD_DIR'] = "./build"
+        gym(scheme: "Seaquill",
+            configuration: "Debug",
+            export_options: "./fastlane/export.plist",
+            output_directory: ENV['TARGET_BUILD_DIR'])
+
+        # Zip up the .app to upload to hockeyapp
+        app_path = ENV[SharedValues::IPA_OUTPUT_PATH.to_s]
+        dir = File.dirname(ENV[SharedValues::IPA_OUTPUT_PATH.to_s])
+        app_filename = File.basename(app_path)
+        zip_path = dir + "/" + File.basename(app_path) + ".zip"
+
+        Actions.sh("pushd #{dir} && zip -r #{zip_path} #{app_filename}/* && popd")
+
+        hockey(ipa: zip_path,
+               dsym: zip_path,
+               api_token: ENV['HOCKEY_API_TOKEN'],
+               public_identifier: ENV['HOCKEY_APP_ID'],
+               notify: "0")
+  end
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+  end
+
+  error do |lane, exception|
+  end
+end

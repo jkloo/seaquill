@@ -14,6 +14,8 @@
 		31E47B661CE2A8C500F5DEF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31E47B641CE2A8C500F5DEF8 /* Main.storyboard */; };
 		31E47B711CE2A8C500F5DEF8 /* SeaquillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E47B701CE2A8C500F5DEF8 /* SeaquillTests.swift */; };
 		31E47B7C1CE2A8C500F5DEF8 /* SeaquillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E47B7B1CE2A8C500F5DEF8 /* SeaquillUITests.swift */; };
+		31E47B8F1CE3D53D00F5DEF8 /* export.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31E47B8A1CE3D53D00F5DEF8 /* export.plist */; };
+		31E47B911CE3D53D00F5DEF8 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 31E47B8C1CE3D53D00F5DEF8 /* Fastfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		31E47B771CE2A8C500F5DEF8 /* SeaquillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeaquillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E47B7B1CE2A8C500F5DEF8 /* SeaquillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeaquillUITests.swift; sourceTree = "<group>"; };
 		31E47B7D1CE2A8C500F5DEF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31E47B8A1CE3D53D00F5DEF8 /* export.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = export.plist; sourceTree = "<group>"; };
+		31E47B8C1CE3D53D00F5DEF8 /* Fastfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Fastfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		31E47B501CE2A8C500F5DEF8 = {
 			isa = PBXGroup;
 			children = (
+				31E47B891CE3D53D00F5DEF8 /* fastlane */,
 				31E47B5B1CE2A8C500F5DEF8 /* Seaquill */,
 				31E47B6F1CE2A8C500F5DEF8 /* SeaquillTests */,
 				31E47B7A1CE2A8C500F5DEF8 /* SeaquillUITests */,
@@ -123,6 +128,15 @@
 				31E47B7D1CE2A8C500F5DEF8 /* Info.plist */,
 			);
 			path = SeaquillUITests;
+			sourceTree = "<group>";
+		};
+		31E47B891CE3D53D00F5DEF8 /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				31E47B8A1CE3D53D00F5DEF8 /* export.plist */,
+				31E47B8C1CE3D53D00F5DEF8 /* Fastfile */,
+			);
+			path = fastlane;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +243,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31E47B911CE3D53D00F5DEF8 /* Fastfile in Resources */,
 				31E47B631CE2A8C500F5DEF8 /* Assets.xcassets in Resources */,
 				31E47B661CE2A8C500F5DEF8 /* Main.storyboard in Resources */,
+				31E47B8F1CE3D53D00F5DEF8 /* export.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
